@@ -12,7 +12,7 @@ func TestGetAPIKey(t *testing.T) {
 	}
 
 	tests := []test{
-		{input: http.Header{"Authorisation": {"ApiKey asfsdfsfsfergergrg"}}, want: "asfsdfsfsfergergrg"},
+		{input: http.Header{"Authorization": {"ApiKey asfsdfsfsfergergrg"}}, want: "asfsdfsfsfergergrg"},
 		{input: http.Header{"Authorization": {"ApiKey sadasdasd"}}, want: "sadasdasd"},
 		{input: http.Header{"Authorization": {"ApiKey"}}, want: ""},
 		{input: http.Header{"Authorization": {"asdasd sadasdasd"}}, want: ""},
